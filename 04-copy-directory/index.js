@@ -4,7 +4,7 @@ const fs = require('fs')
 const pathJoin = path.join(__dirname, 'files')
 const pathCopy = path.join(__dirname, 'files-copy')
 
-const copyFolder = () => {
+async function copyFolder() {
    fs.mkdir(pathCopy, { recursive: true }, error => {
       if (error) throw error
    })
